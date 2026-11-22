@@ -1,0 +1,14 @@
+Airemo
+Copyright 2026 Devakrishnan Gopal
+
+Licensing differs by part of this repository:
+
+  * apps/relay        Functional Source License 1.1, ALv2 Future License
+                      (see apps/relay/LICENSE). Converts to Apache-2.0 on the
+                      second anniversary of each release.
+  * everything else   Apache License 2.0 (see LICENSE).
+
+"Airemo" and the Airemo logo are trademarks of Devakrishnan Gopal. These
+licenses grant no rights to use the Airemo name or marks, except to describe
+where the software comes from. Modified versions must use a different name and
+logo. See TRADEMARKS.md.

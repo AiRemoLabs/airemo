@@ -1,0 +1,36 @@
+{
+  "name": "@airemo/protocol",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiRemoLabs/airemo.git",
+    "directory": "packages/protocol"
+  },
+  "homepage": "https://github.com/AiRemoLabs/airemo/tree/dev/packages/protocol",
+  "bugs": {
+    "url": "https://github.com/AiRemoLabs/airemo/issues"
+  },
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@airemo/config": "workspace:*",
+    "@types/node": "^26.6.6"
+  }
+}

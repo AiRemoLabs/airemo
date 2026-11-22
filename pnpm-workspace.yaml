@@ -1,0 +1,8 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Dependencies allowed to run install/build scripts (native modules)
+allowBuilds:
+  esbuild: true
+  node-pty: true

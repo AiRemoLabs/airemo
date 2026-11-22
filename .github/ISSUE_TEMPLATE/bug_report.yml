@@ -1,0 +1,69 @@
+name: Bug report
+description: Something in Airemo does not work as described
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Security problems do not go here**: follow SECURITY.md and report
+        them privately. Please remove anything private (paths, tokens, project code) before posting.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. airemo start --relay ...
+        2. airemo launch claude-code
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Error output or logs
+      description: Copy the exact error text. It is formatted as code automatically.
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: Airemo version or commit
+      description: Output of `airemo -v`, or `git rev-parse --short HEAD` when running from source.
+    validations:
+      required: true
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent
+      options:
+        - Claude Code
+        - Cursor
+        - None / not agent related
+    validations:
+      required: true
+  - type: input
+    id: agent-version
+    attributes:
+      label: Agent version
+      description: For example `claude --version` or `cursor-agent --version`.
+  - type: input
+    id: os
+    attributes:
+      label: Operating system and Node.js version
+      placeholder: macOS 15.2, Node 22.11
+    validations:
+      required: true
+  - type: dropdown
+    id: relay
+    attributes:
+      label: Relay
+      options:
+        - Not using a relay (terminal only)
+        - Self-hosted relay
+        - Other

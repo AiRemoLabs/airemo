@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+build/
+out/
+.next/
+.expo/
+.turbo/
+*.tsbuildinfo
+coverage/
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Airemo local data (keys, session logs, local store)
+.airemo/
+*.sqlite
+*.sqlite-journal
+*.db
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Mobile native build output
+apps/mobile/ios/
+apps/mobile/android/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Generated terminal page for the mobile WebView
+apps/mobile/src/terminal/terminal-html.generated.ts

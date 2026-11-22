@@ -1,0 +1,41 @@
+{
+  "name": "@airemo/relay",
+  "version": "0.1.0",
+  "license": "FSL-1.1-ALv2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiRemoLabs/airemo.git",
+    "directory": "apps/relay"
+  },
+  "homepage": "https://github.com/AiRemoLabs/airemo/tree/dev/apps/relay",
+  "bugs": {
+    "url": "https://github.com/AiRemoLabs/airemo/issues"
+  },
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/main.ts",
+    "start": "node dist/main.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@airemo/crypto": "workspace:*",
+    "@fastify/websocket": "^11.3.7",
+    "fastify": "^5.12.8"
+  },
+  "devDependencies": {
+    "@airemo/config": "workspace:*",
+    "@types/node": "^26.6.6",
+    "@types/ws": "^8.18.2"
+  }
+}

@@ -1,0 +1,50 @@
+name: New agent plugin
+description: Propose support for another AI CLI agent (Codex, Gemini CLI, Aider, Goose, ...)
+labels: ["agent-plugin"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [`packages/plugin-sdk/README.md`](https://github.com/AiRemoLabs/airemo/blob/dev/packages/plugin-sdk/README.md) first.
+        The key question for any agent is how Airemo can **hold each action until the user approves
+        it**, and deny it by default.
+  - type: input
+    id: agent
+    attributes:
+      label: Agent and its CLI command
+      placeholder: Codex (`codex`)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version you tested with
+    validations:
+      required: true
+  - type: textarea
+    id: approvals
+    attributes:
+      label: How can approvals be wired?
+      description: |
+        Does the agent have hooks, a permission callback or a settings file that can run a script
+        before each tool use? Can that script block and deny? Link the agent's docs.
+    validations:
+      required: true
+  - type: textarea
+    id: ask-first
+    attributes:
+      label: Ask-first mode
+      description: How is the agent started so that it asks before acting, even if the user's own config auto-approves?
+    validations:
+      required: true
+  - type: textarea
+    id: resume
+    attributes:
+      label: Resume
+      description: How does the agent resume an earlier conversation (flag, with or without an id)?
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Contributing
+      options:
+        - label: I would like to write this plugin myself.

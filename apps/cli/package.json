@@ -1,0 +1,50 @@
+{
+  "name": "airemo",
+  "version": "0.1.0",
+  "description": "Airemo CLI: launch, monitor and pair AI coding agents",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiRemoLabs/airemo.git",
+    "directory": "apps/cli"
+  },
+  "homepage": "https://github.com/AiRemoLabs/airemo/tree/dev/apps/cli",
+  "bugs": {
+    "url": "https://github.com/AiRemoLabs/airemo/issues"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "claude-code",
+    "cursor",
+    "cli",
+    "remote",
+    "approvals",
+    "e2e-encryption"
+  ],
+  "type": "module",
+  "bin": {
+    "airemo": "./dist/bin.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/bin.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@airemo/crypto": "workspace:*",
+    "@airemo/daemon": "workspace:*",
+    "@airemo/protocol": "workspace:*",
+    "commander": "^15.1.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@airemo/client": "workspace:*",
+    "@airemo/config": "workspace:*",
+    "@airemo/plugin-sdk": "workspace:*",
+    "@airemo/relay": "workspace:*",
+    "@types/node": "^26.6.6",
+    "@types/qrcode": "^1.5.6"
+  }
+}

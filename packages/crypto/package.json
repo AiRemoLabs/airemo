@@ -1,0 +1,39 @@
+{
+  "name": "@airemo/crypto",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiRemoLabs/airemo.git",
+    "directory": "packages/crypto"
+  },
+  "homepage": "https://github.com/AiRemoLabs/airemo/tree/dev/packages/crypto",
+  "bugs": {
+    "url": "https://github.com/AiRemoLabs/airemo/issues"
+  },
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "devDependencies": {
+    "@airemo/config": "workspace:*",
+    "@types/node": "^26.6.6",
+    "noise-handshake": "^4.2.0"
+  },
+  "dependencies": {
+    "@noble/ciphers": "^2.4.0",
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.4.0"
+  }
+}

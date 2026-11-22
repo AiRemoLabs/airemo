@@ -1,0 +1,37 @@
+{
+  "name": "airemo-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Airemo - AI agent operating layer",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiRemoLabs/airemo.git"
+  },
+  "homepage": "https://github.com/AiRemoLabs/airemo#readme",
+  "bugs": {
+    "url": "https://github.com/AiRemoLabs/airemo/issues"
+  },
+  "packageManager": "pnpm@11.5.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "postinstall": "node scripts/fix-node-pty.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.6",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "turbo": "^2.11.10",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

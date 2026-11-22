@@ -1,0 +1,49 @@
+{
+  "name": "@airemo/daemon",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AiRemoLabs/airemo.git",
+    "directory": "apps/daemon"
+  },
+  "homepage": "https://github.com/AiRemoLabs/airemo/tree/dev/apps/daemon",
+  "bugs": {
+    "url": "https://github.com/AiRemoLabs/airemo/issues"
+  },
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/main.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@airemo/crypto": "workspace:*",
+    "@airemo/plugin-claude-code": "workspace:*",
+    "@airemo/plugin-cursor": "workspace:*",
+    "@airemo/plugin-sdk": "workspace:*",
+    "@airemo/protocol": "workspace:*",
+    "@fastify/websocket": "^11.3.7",
+    "@xterm/addon-serialize": "^0.14.0",
+    "@xterm/headless": "^6.0.0",
+    "fastify": "^5.12.8",
+    "node-pty": "^1.1.0"
+  },
+  "devDependencies": {
+    "@airemo/client": "workspace:*",
+    "@airemo/config": "workspace:*",
+    "@airemo/relay": "workspace:*",
+    "@types/node": "^26.6.6",
+    "@types/ws": "^8.18.2"
+  }
+}

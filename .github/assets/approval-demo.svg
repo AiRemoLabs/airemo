@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" width="920" height="400" role="img" aria-label="An agent asks to run git push. Airemo shows the exact command in the terminal and on the phone, and waits for Allow or Deny.">
+  <title>Airemo approval: the exact command, on your terminal and your phone</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E2022"/>
+      <stop offset="1" stop-color="#121314"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="920" height="400" rx="18" fill="url(#bg)"/>
+
+  <!-- Terminal -->
+  <g transform="translate(36 44)">
+    <rect width="500" height="312" rx="12" fill="#0B0C0D" stroke="#2C2F33"/>
+    <rect width="500" height="34" rx="12" fill="#1A1C1E"/>
+    <rect y="22" width="500" height="12" fill="#1A1C1E"/>
+    <circle cx="20" cy="17" r="6" fill="#EF4444"/>
+    <circle cx="40" cy="17" r="6" fill="#F59E0B"/>
+    <circle cx="60" cy="17" r="6" fill="#A3E635"/>
+    <text x="250" y="22" text-anchor="middle" class="mono" font-size="12" fill="#8A9099">~/projects/app : airemo launch claude-code</text>
+
+    <text x="24" y="74" class="mono" font-size="14" fill="#A3E635" font-weight="700">Airemo: approval needed</text>
+    <text x="24" y="104" class="mono" font-size="14" fill="#C9CED6">Claude Code wants to use Bash:</text>
+    <rect x="24" y="122" width="452" height="44" rx="8" fill="#16181A" stroke="#2C2F33"/>
+    <text x="40" y="150" class="mono" font-size="15" fill="#F2F4F7">git push origin fix/login-bug</text>
+    <text x="24" y="206" class="mono" font-size="14" fill="#A3E635">[y] Allow</text>
+    <text x="134" y="206" class="mono" font-size="14" fill="#EF4444">[n] Reject (Esc)</text>
+    <text x="24" y="250" class="mono" font-size="12" fill="#6B7178">Nothing you type reaches the agent while this is open.</text>
+    <text x="24" y="272" class="mono" font-size="12" fill="#6B7178">No answer in 120 s means no.</text>
+  </g>
+
+  <!-- Encrypted link -->
+  <g>
+    <path d="M552 200 H634" stroke="#4D7C0F" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
+    <path d="M626 192 L636 200 L626 208" stroke="#4D7C0F" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="593" y="182" text-anchor="middle" class="sans" font-size="11" fill="#8A9099">end-to-end</text>
+    <text x="593" y="226" text-anchor="middle" class="sans" font-size="11" fill="#8A9099">encrypted</text>
+  </g>
+
+  <!-- Phone -->
+  <g transform="translate(652 24)">
+    <rect width="232" height="352" rx="32" fill="#0B0C0D" stroke="#2C2F33" stroke-width="2"/>
+    <rect x="86" y="12" width="60" height="8" rx="4" fill="#1A1C1E"/>
+    <rect x="12" y="34" width="208" height="306" rx="20" fill="#1A1C1E"/>
+
+    <text x="28" y="66" class="sans" font-size="15" font-weight="700" fill="#F2F4F7">Approval needed</text>
+    <rect x="28" y="80" width="84" height="20" rx="10" fill="#26310F"/>
+    <text x="70" y="94" text-anchor="middle" class="sans" font-size="11" fill="#A3E635">Claude Code</text>
+    <text x="28" y="124" class="sans" font-size="13" fill="#C9CED6">Run a shell command</text>
+    <text x="28" y="142" class="sans" font-size="11" fill="#6B7178">app · MacBook</text>
+
+    <rect x="28" y="156" width="176" height="56" rx="8" fill="#0B0C0D" stroke="#2C2F33"/>
+    <text x="40" y="180" class="mono" font-size="12" fill="#F2F4F7">git push origin</text>
+    <text x="40" y="198" class="mono" font-size="12" fill="#F2F4F7">fix/login-bug</text>
+
+    <rect x="28" y="228" width="176" height="5" rx="2.5" fill="#2C2F33"/>
+    <rect x="28" y="228" width="118" height="5" rx="2.5" fill="#F59E0B"/>
+    <text x="28" y="250" class="sans" font-size="10" fill="#8A9099">Denied automatically in 1:21</text>
+
+    <rect x="28" y="270" width="84" height="40" rx="12" fill="#26292C"/>
+    <text x="70" y="295" text-anchor="middle" class="sans" font-size="14" fill="#F2F4F7">Deny</text>
+    <rect x="120" y="270" width="84" height="40" rx="12" fill="#A3E635"/>
+    <text x="162" y="295" text-anchor="middle" class="sans" font-size="14" font-weight="700" fill="#121314">Allow</text>
+  </g>
+</svg>
